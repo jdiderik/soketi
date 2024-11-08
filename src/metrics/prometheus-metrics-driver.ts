@@ -168,7 +168,7 @@ export class PrometheusMetricsDriver implements MetricsInterface {
     /**
      * Get the stored metrics as JSON.
      */
-    getMetricsAsJson(): Promise<prom.metric[]|void> {
+    getMetricsAsJson(): Promise<prom.MetricObjectWithValues<prom.MetricValue<string>>[]|void> {
         return this.register.getMetricsAsJSON();
     }
 
